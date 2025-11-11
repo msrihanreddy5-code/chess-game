@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Chess Game</h1>
+
+  <div class="controls">
+    <label for="mode">Mode:</label>
+    <select id="mode">
+      <option value="pvp">Player vs Player</option>
+      <option value="ai">Player vs AI</option>
+    </select>
+
+    <label id="diffLabel" style="display:none;">AI Difficulty:</label>
+    <select id="difficulty" style="display:none;">
+      <option value="easy">Easy</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <label id="colorLabel" style="display:none;">Play as:</label>
+    <select id="playerColor" style="display:none;">
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+  </div>
+
+  <div id="gameContainer">
+    <div id="chessboard"></div>
+  </div>
+
+  <p id="status">White's Turn</p>
+  <button id="restartBtn">Restart Game</button>
+
+  <div id="gameOverOverlay" class="hidden">
+    <div class="overlay-content">
+      <h2 id="winnerText"></h2>
+      <button id="playAgainBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
